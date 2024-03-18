@@ -121,7 +121,7 @@ USE_TZ = True
 
 EMAIL_HOST = 'smtp.yandex.com'
 EMAIL_HOST_USER = 'abdullovadlet@yandex.kz'
-EMAIL_HOST_PASSWORD = 'ADlet007'
+EMAIL_HOST_PASSWORD = 'qknnsiklbggyexqm'
 EMAIL_PORT = 465
 EMAIL_USE_SSL = True
 
@@ -134,6 +134,5 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 STATICFILES_DIRS = [BASE_DIR / 'static']
 
-EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
 
 
