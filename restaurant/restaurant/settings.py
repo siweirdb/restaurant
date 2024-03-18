@@ -37,6 +37,8 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+
+    'menu'
 ]
 
 MIDDLEWARE = [
@@ -115,9 +117,23 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
+# Sending emails
+
+EMAIL_HOST = 'smtp.yandex.com'
+EMAIL_HOST_USER = 'abdullovadlet@yandex.kz'
+EMAIL_HOST_PASSWORD = 'ADlet007'
+EMAIL_PORT = 465
+EMAIL_USE_SSL = True
+
 STATIC_URL = "/static/"
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+STATICFILES_DIRS = [BASE_DIR / 'static']
+
+EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
+
+

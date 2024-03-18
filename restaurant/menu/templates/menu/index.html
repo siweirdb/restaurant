@@ -11,12 +11,12 @@
 
 
 
-	<link rel="stylesheet" href="css/bootstrap.min.css">
-	<link rel="stylesheet" href="css/animate.min.css">
-	<link rel="stylesheet" href="css/font-awesome.min.css">
-	<link rel="stylesheet" href="css/nivo-lightbox.css">
-	<link rel="stylesheet" href="css/nivo_themes/default/default.css">
-	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="static/menu/css/bootstrap.min.css">
+	<link rel="stylesheet" href="static/menu/css/animate.min.css">
+	<link rel="stylesheet" href="static/menu/css/font-awesome.min.css">
+	<link rel="stylesheet" href="static/menu/css/nivo-lightbox.css">
+	<link rel="stylesheet" href="static/menu/css/nivo_themes/default/default.css">
+	<link rel="stylesheet" href="static/menu/css/style.css">
 	<link href='https://fonts.googleapis.com/css?family=Roboto:400,500' rel='stylesheet' type='text/css'>
 </head>
 <body>
@@ -73,31 +73,31 @@
 				<hr>
 			</div>
 			<div class="col-md-4 col-sm-4 wow fadeInUp" data-wow-delay="0.3s">
-				<a href="images/gallery-img1.jpg" data-lightbox-gallery="zenda-gallery"><img src="images/gallery-img1.jpg" alt="gallery img"></a>
+				<a href="static/menu/images/gallery-img1.jpg" data-lightbox-gallery="zenda-gallery"><img src="static/menu/images/gallery-img1.jpg" alt="gallery img"></a>
 				<div>
 					<h3>Самса</h3>
 					<span>С курицей /С сыром /С мясом</span>
 				</div>
-				<a href="images/gallery-img2.jpg" data-lightbox-gallery="zenda-gallery"><img src="images/gallery-img2.jpg" alt="gallery img"></a>
+				<a href="static/menu/images/gallery-img2.jpg" data-lightbox-gallery="zenda-gallery"><img src="static/menu/images/gallery-img2.jpg" alt="gallery img"></a>
 				<div>
 					<h3>Сосиска в тесте</h3>
 					<span>Запеченые/Жаренные</span>
 				</div>
 			</div>
 			<div class="col-md-4 col-sm-4 wow fadeInUp" data-wow-delay="0.6s">
-				<a href="images/gallery-img3.jpg" data-lightbox-gallery="zenda-gallery"><img src="images/gallery-img3.jpg" alt="gallery img"></a>
+				<a href="static/menu/images/gallery-img3.jpg" data-lightbox-gallery="zenda-gallery"><img src="static/menu/images/gallery-img3.jpg" alt="gallery img"></a>
 				<div>
 					<h3>Сэндвич Круассан</h3>
 					<span>Соус/ Курица/Салат</span>
 				</div>
 			</div>
 			<div class="col-md-4 col-sm-4 wow fadeInUp" data-wow-delay="0.9s">
-				<a href="images/gallery-img4.jpg" data-lightbox-gallery="zenda-gallery"><img src="images/gallery-img4.jpg" alt="gallery img"></a>
+				<a href="static/menu/images/gallery-img4.jpg" data-lightbox-gallery="zenda-gallery"><img src="static/menu/images/gallery-img4.jpg" alt="gallery img"></a>
 				<div>
 					<h3>Салаты </h3>
 					<span>Оливье/Винегрет</span>
 				</div>
-				<a href="images/gallery-img5.jpg" data-lightbox-gallery="zenda-gallery"><img src="images/gallery-img5.jpg" alt="gallery img"></a>
+				<a href="static/menu/images/gallery-img5.jpg" data-lightbox-gallery="zenda-gallery"><img src="static/menu/images/gallery-img5.jpg" alt="gallery img"></a>
 				<div>
 					<h3>Пицца Пепперони</h3>
 					<span>Сыр / Колбаса</span>
@@ -162,17 +162,17 @@
 				<hr>
 			</div>
 			<div class="col-md-4 col-sm-4 wow fadeInUp" data-wow-delay="0.3s">
-				<img src="images/team01.jpeg" width="349" class="img-responsive center-block" alt="team img">
+				<img src="static/menu/images/team01.jpeg" width="349" class="img-responsive center-block" alt="team img">
 				<h3>Ожан Көркем</h3>
 				<h3><a href="https://t.me/+9N2UcvvXBvUzMzFi"></a></h3>
 			</div>
 			<div class="col-md-4 col-sm-4 wow fadeInUp" data-wow-delay="0.6s">
-				<img src="images/team0.jpeg" width="299" class="img-responsive center-block" alt="team img">
+				<img src="static/menu/images/team0.jpeg" width="299" class="img-responsive center-block" alt="team img">
 				<h3>Сапар Алихан</h3>
 				<h3><a href="https://t.me/+9N2UcvvXBvUzMzFi"><em><ins>TELEGRAMM</ins></em></a> </h3>
 			</div>
 			<div class="col-md-4 col-sm-4 wow fadeInUp" data-wow-delay="0.9s">
-				<img src="images/team03.jpeg" width="250" class="img-responsive center-block" alt="team img">
+				<img src="static/menu/images/team03.jpeg" width="250" class="img-responsive center-block" alt="team img">
 				<h3>Сағатбек Алибек</h3>
 				<h4><a href="https://t.me/+9N2UcvvXBvUzMzFi"></a></h4>
 				
@@ -191,7 +191,8 @@
 				<hr>
 			</div>
 			<div class="col-md-offset-1 col-md-10 col-sm-12 wow fadeIn" data-wow-delay="0.9s">
-				<form action="#" method="post">
+				<form action="{% url 'menu:send'%}" method="post">
+					{% csrf_token %}
 					<div class="col-md-6 col-sm-6">
 						<input name="name" type="text" class="form-control" id="name" placeholder="Имя">
 				  </div>
@@ -253,7 +254,6 @@
               </div>
 				</ul>
           </div>
-
 				</ul>
 			</div>
       
@@ -280,13 +280,13 @@
 </section>
 
 <!-- JAVASCRIPT JS FILES -->	
-<script src="js/jquery.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/jquery.parallax.js"></script>
-<script src="js/smoothscroll.js"></script>
-<script src="js/nivo-lightbox.min.js"></script>
-<script src="js/wow.min.js"></script>
-<script src="js/custom.js"></script>
+<script src="static/menu/js/jquery.js"></script>
+<script src="static/menu/js/bootstrap.min.js"></script>
+<script src="static/menu/js/jquery.parallax.js"></script>
+<script src="static/menu/js/smoothscroll.js"></script>
+<script src="static/menu/js/nivo-lightbox.min.js"></script>
+<script src="static/menu/js/wow.min.js"></script>
+<script src="static/menu/js/custom.js"></script>
 
 </body>
 </html>
